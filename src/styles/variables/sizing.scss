@@ -1,0 +1,58 @@
+/** Widths */
+$max-x-0: 820px;
+$max-x-1: 960px;
+$max-x-2: 1200px;
+$max-x-3: 1440px;
+
+/** Margins */
+$m-1: 4px;
+$m-2: 8px;
+$m-3: 16px;
+$m-4: 24px;
+$m-5: 32px;
+$m-6: 64px;
+$m-7: 96px;
+$m-8: 128px;
+
+/** Gutters */
+$gutter-y: $m-3;
+$gutter-x: math.div($m-4, 2);
+$gutter: $gutter-y $gutter-x;
+$gutter__lg: ($gutter-y * 2) ($gutter-x * 2);
+
+/** Typography */
+$fs-1: 11px;
+$fs-2: 13px;
+$fs-3: 16px;
+$fs-4: 18px;
+$fs-5: 24px;
+$fs-6: 32px;
+$fs-7: 48px;
+$fs-8: 60px;
+
+$hs-1: $fs-7;
+$hs-2: $fs-6;
+$hs-3: $fs-5;
+$hs-4: $fs-4;
+$hs-5: $fs-3;
+$hs-6: $fs-2;
+
+$lh-0: 0.75;
+$lh-1: 1;
+$lh-2: 1.25;
+$lh-3: 1.5;
+
+/** Border Radii */
+$br-1: 8px;
+$br-2: 16px;
+$br-3: 48px;
+$br-100: 50%;
+
+/** Breakpoints */
+$bp-1: 480px; // <= Mobile
+$bp-2: 728px; // <= Tablet
+$bp-3: 1024px; // <= Small Display
+$bp-4: 1200px; // <= Modern Display
+$bp-5: 1440px; // <= Large Display
+$bp-6: 1920px; // <= XL Display
+$bp-7: 2160px; // <= 4k Display

@@ -1,0 +1,11 @@
+@mixin font(
+  $font-family: $ff-default,
+  $font-size: $fs-3,
+  $font-color: $fc,
+  $line-height: $lh-1
+) {
+  font-family: $font-family;
+  font-size: $font-size;
+  color: $font-color;
+  line-height: $line-height;
+}

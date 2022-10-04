@@ -1,0 +1,15 @@
+.container {
+  margin: 0 auto;
+
+  @include mq-desktop() {
+    max-width: $max-x-1;
+  }
+
+  @include mq-giant() {
+    max-width: $max-x-2;
+  }
+
+  @include mq-2k() {
+    max-width: $max-x-3;
+  }
+}

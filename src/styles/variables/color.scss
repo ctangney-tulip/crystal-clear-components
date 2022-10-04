@@ -1,0 +1,22 @@
+/** Default Colors */
+$c-blue-01: #0267c1;
+$c-blue-02: #0075c4;
+$c-blue-lite: #cae5ff;
+$c-black: #0c120c;
+$c-grey: #443742;
+$c-white: #f3f4ff;
+
+/** Box Colors */
+/** A Box is any block-level element; these elements may have
+box-shadows, borders, et cetera. */
+$box-bg__dark: $c-grey;
+$box-bg__lite: $c-blue-lite;
+$box-bs: 2px 3px 14px -1px rgba(0, 0, 0, 0.65);
+$box-bs__lg: 2px 3px 22px 2px rgba(0, 0, 0, 0.65);
+$box-bs__hover: 2px 27px 30px 2px rgba(0, 0, 0, 0.55);
+$box-border__dark: solid 1px $c-grey;
+$box-border__lite: solid 1px $c-blue-lite;
+
+/** Font Colors */
+$fc: $c-black;
+$fc__lite: $c-white;
