@@ -1,0 +1,9 @@
+// Store any styles specific to requirements for the
+// `render()` method of custom Web Components here
+.cc-load {
+  display: none;
+
+  &[rendered='true'] {
+    display: block;
+  }
+}

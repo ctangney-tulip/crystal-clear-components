@@ -8,9 +8,9 @@ export default class BasicCard extends HTMLElement {
     this.render();
   }
 
-  private async clone() {
+  private clone() {
     const slots = this.querySelectorAll('[slot]');
-    this.innerHTML = await this.template;
+    this.innerHTML = this.template;
 
     slots.forEach((slot) => {
       const slotName = slot.getAttribute('slot');
