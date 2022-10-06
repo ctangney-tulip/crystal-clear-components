@@ -1,7 +1,3 @@
-type Props = {
-  element: HTMLElement;
-};
-
-export const isDivElement = function ({ element }: Props) {
+export const isDivElement = function (element: Element) {
   return element.tagName.toLowerCase() === 'div';
 };

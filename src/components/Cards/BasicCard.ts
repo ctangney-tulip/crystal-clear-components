@@ -12,7 +12,7 @@ export default class BasicCard extends HTMLElement {
     const slots = this.querySelectorAll('[slot]');
     this.innerHTML = this.template;
 
-    slots.forEach((slot) => {
+    slots.forEach((slot: Element) => {
       const slotName = slot.getAttribute('slot');
 
       if (slotName!.toLowerCase() === 'body' && isDivElement(slot) === false) {

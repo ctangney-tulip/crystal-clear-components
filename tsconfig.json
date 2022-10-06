@@ -2,8 +2,8 @@
   "compilerOptions": {
     "baseUrl": "src",
     "paths": {
-      "@": ["src/*"],
-      "@components": ["src/components/*"]
+      "@utils": ["utils/index.ts"],
+      "@components": ["components/index.ts"]
     },
     "target": "esnext",
     "useDefineForClassFields": true,

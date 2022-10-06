@@ -4,7 +4,7 @@ const COMPONENT_PREFIX = 'cc';
 import '@styles/index.scss';
 import '@utils/string.ts';
 
-import { BasicCard } from '@components/Cards';
+import { BasicCard } from '@components';
 
 const _REGISTRY_ = [BasicCard];
 
