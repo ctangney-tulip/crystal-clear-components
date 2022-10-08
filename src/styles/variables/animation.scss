@@ -1,8 +1,7 @@
 /** Timing */
-$t-xx-slow: '1s';
-$t-x-slow: '0.5s';
-$t-slow: '0.25s';
-$t-def: '0.125s';
+$t-super-slow: '2s';
+$t-slow: '0.5s';
+$t-def: '0.375s';
 
 /** Timing Function */
 $tf-cubic-bezier: 'cubic-bezier(.79,.19,.35,.98)';

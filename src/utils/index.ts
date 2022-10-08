@@ -1,4 +1,4 @@
-import { isDivElement } from './dom-helpers';
+import * as DomHelpers from './dom-helpers';
 import { styles as GlobalStyles } from './styles';
 
-export { isDivElement, GlobalStyles };
+export { DomHelpers, GlobalStyles };

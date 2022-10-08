@@ -1,4 +1,4 @@
-import { isDivElement } from '@utils';
+import { DomHelpers } from '@utils';
 import '@styles/components/cards/basic-card.scss';
 
 export default class BasicCard extends HTMLElement {
@@ -15,7 +15,10 @@ export default class BasicCard extends HTMLElement {
     slots.forEach((slot: Element) => {
       const slotName = slot.getAttribute('slot');
 
-      if (slotName!.toLowerCase() === 'body' && isDivElement(slot) === false) {
+      if (
+        slotName!.toLowerCase() === 'body' &&
+        DomHelpers.isDivElement(slot) === false
+      ) {
         throw new Error('Slot `<slot="body">` must be a DIV element.');
       }
 
@@ -30,10 +33,16 @@ export default class BasicCard extends HTMLElement {
   }
 
   connectedCallback() {
+    const host = this.classList.contains('cc-load')
+      ? this
+      : this.closest('.cc-load');
+
     try {
-      this.classList.contains('cc-load')
-        ? this.setAttribute('data-rendered', 'true')
-        : this.closest('.cc-load')?.setAttribute('data-rendered', 'true');
+      !host!.getAttribute('data-rendered') &&
+        host!.setAttribute('data-rendered', 'true');
+      DomHelpers.isOnScreen(this) &&
+        !host!.getAttribute('data-opaque') &&
+        host!.setAttribute('data-opaque', 'true');
     } catch (e) {
       console.error(e);
       throw new Error();

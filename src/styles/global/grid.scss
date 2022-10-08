@@ -14,3 +14,28 @@
     max-width: $w-max-x-3;
   }
 }
+
+.row,
+.col {
+  display: flex;
+  flex: 1 0 auto;
+}
+
+.row {
+  margin: 0 (-$gutter-x);
+}
+
+.col {
+  flex-direction: column;
+  flex: 1 0 auto;
+  max-width: 100%;
+  padding: 0 $gutter-x;
+}
+
+@for $i from 1 through 8 {
+  .col-#{$i} {
+    @extend .col;
+    flex: 1 0 math.percentage(math.div($i, 8));
+    max-width: math.percentage(math.div($i, 8));
+  }
+}

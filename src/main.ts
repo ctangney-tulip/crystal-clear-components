@@ -27,8 +27,8 @@ const WatcherOpts = {
 globalThis.Watcher = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     entry.isIntersecting &&
-      entry.target.getAttribute('rendered') &&
-      console.log('renderino');
+      entry.target.getAttribute('data-rendered') &&
+      entry.target.setAttribute('data-opaque', 'true');
   });
 }, WatcherOpts);
 

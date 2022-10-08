@@ -5,25 +5,49 @@
       /** Component Loading Style here for now */
       .cc-load {
         display: none;
+        opacity: 0;
+        transition: opacity cubic-bezier(0.79, 0.19, 0.35, 0.98) 0.375s;
       }
-      .cc-load[rendered='true'] {
+      .cc-load[data-rendered='true'] {
         display: block;
+      }
+      .cc-load[data-opaque='true'] {
+        opacity: 1;
+        transition: opacity cubic-bezier(0.79, 0.19, 0.35, 0.98) 0.375s;
       }
     </style>
   </head>
   <body>
-    <div class="container cc-load">
-      <cc-basic-card>
-        <h1 slot="heading">Heading</h1>
-        <div slot="body">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-            accusantium tempore accusamus ad dignissimos atque ratione velit
-            possimus omnis eos quod nostrum doloribus, porro, corrupti
-            inventore, sed molestiae similique expedita?
-          </p>
+    <div class="container">
+      <div class="row">
+        <div class="col-7">
+          <cc-basic-card class="cc-load">
+            <h1 slot="heading">Heading</h1>
+            <div slot="body">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Laboriosam accusantium tempore accusamus ad dignissimos atque
+                ratione velit possimus omnis eos quod nostrum doloribus, porro,
+                corrupti inventore, sed molestiae similique expedita?
+              </p>
+            </div>
+          </cc-basic-card>
         </div>
-      </cc-basic-card>
+
+        <div class="col-1">
+          <cc-basic-card class="cc-load">
+            <h1 slot="heading">Heading</h1>
+            <div slot="body">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Laboriosam accusantium tempore accusamus ad dignissimos atque
+                ratione velit possimus omnis eos quod nostrum doloribus, porro,
+                corrupti inventore, sed molestiae similique expedita?
+              </p>
+            </div>
+          </cc-basic-card>
+        </div>
+      </div>
     </div>
 
     <script type="module" src="/src/main.ts"></script>
