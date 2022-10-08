@@ -1,15 +1,16 @@
 .container {
   margin: 0 auto;
+  padding: $gutter__lg;
 
   @include mq-desktop() {
-    max-width: $max-x-1;
+    max-width: $w-max-x-1;
   }
 
   @include mq-giant() {
-    max-width: $max-x-2;
+    max-width: $w-max-x-2;
   }
 
   @include mq-2k() {
-    max-width: $max-x-3;
+    max-width: $w-max-x-3;
   }
 }

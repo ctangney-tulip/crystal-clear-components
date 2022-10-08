@@ -1,0 +1,3 @@
+@mixin transition($prop: all) {
+  transition: $prop $t-def $tf-cubic-bezier;
+}

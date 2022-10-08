@@ -2,8 +2,15 @@
 // `render()` method of custom Web Components here
 .cc-load {
   display: none;
+  opacity: 0;
+  @include transition(opacity);
 
-  &[rendered='true'] {
+  &[data-rendered='true'] {
     display: block;
+  }
+
+  &[data-visible='true'] {
+    opacity: 1;
+    @include transition(opacity);
   }
 }

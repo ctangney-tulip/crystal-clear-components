@@ -30,7 +30,14 @@ export default class BasicCard extends HTMLElement {
   }
 
   connectedCallback() {
-    this.setAttribute('rendered', 'true');
+    try {
+      this.classList.contains('cc-load')
+        ? this.setAttribute('data-rendered', 'true')
+        : this.closest('.cc-load')?.setAttribute('data-rendered', 'true');
+    } catch (e) {
+      console.error(e);
+      throw new Error();
+    }
   }
 
   private template = `
