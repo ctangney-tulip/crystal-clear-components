@@ -1,10 +1,23 @@
-/** Font Helpers */
-.f-uppercase {
+/*#region Text Helpers
+*/
+.text-uppercase {
   text-transform: uppercase;
 }
 
-.f-italic {
+.text-italic {
   font-style: italic;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
 }
 
 @each $class, $weight in $font-weights {
@@ -12,5 +25,94 @@
     font-weight: $weight;
   }
 }
+/*#endregion*/
 
-/** Margin Helpers */
+/*#region Margin Helpers */
+$index: 1;
+@each $name, $margin, $i in $margins {
+  .mt-#{$index} {
+    margin-top: $margin;
+  }
+
+  .mr-#{$index} {
+    margin-right: $margin;
+  }
+
+  .mb-#{$index} {
+    margin-bottom: $margin;
+  }
+
+  .ml-#{$index} {
+    margin-left: $margin;
+  }
+
+  .mx-#{$index} {
+    margin: 0 $margin;
+  }
+
+  .my-#{$index} {
+    margin: $margin 0;
+  }
+
+  .m-#{$index} {
+    margin: $margin;
+  }
+
+  $index: $index + 1;
+}
+
+.mt-auto {
+  margin-top: auto;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
+.mb-auto {
+  margin-bottom: auto;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.mx-auto {
+  margin: 0 auto;
+}
+/*#endregion*/
+
+/*#region Padding Helpers */
+$index: 1;
+@each $name, $padding, $i in $margins {
+  .pt-#{$index} {
+    padding-top: $padding;
+  }
+
+  .pr-#{$index} {
+    padding-right: $padding;
+  }
+
+  .pb-#{$index} {
+    padding-bottom: $padding;
+  }
+
+  .pl-#{$index} {
+    padding-left: $padding;
+  }
+
+  .px-#{$index} {
+    padding: 0 $padding;
+  }
+
+  .py-#{$index} {
+    padding: $padding 0;
+  }
+
+  .p-#{$index} {
+    padding: $padding;
+  }
+
+  $index: $index + 1;
+}
+/*#endregion*/

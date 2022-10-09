@@ -1,7 +1,7 @@
 import { DomHelpers } from '@utils';
 import '@styles/components/cards/basic-card.scss';
 
-export default class BasicCard extends HTMLElement {
+export default class CardBasic extends HTMLElement {
   constructor() {
     super();
 

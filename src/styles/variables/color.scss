@@ -20,10 +20,10 @@ $colors: (
 box-shadows, borders, et cetera. */
 $box-bg-dark: $c-grey;
 $box-bg-lite: $c-blue-lite;
-$box-bs: 2px 3px 14px -1px rgba(0, 0, 0, 0.65);
+$box-bs-def: 2px 3px 14px -1px rgba(0, 0, 0, 0.65);
 $box-bs-lg: 2px 3px 22px 2px rgba(0, 0, 0, 0.65);
 $box-bs-hover: 2px 27px 30px 2px rgba(0, 0, 0, 0.55);
-$box-border-color: $c-grey;
+$box-border-color-def: $c-grey;
 $box-border-color-lite: $c-blue-lite;
 $box-border: solid 1px;
 

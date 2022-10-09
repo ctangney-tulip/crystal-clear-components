@@ -5,10 +5,10 @@ const LOAD_CLASS = `.${COMPONENT_PREFIX}-load`;
 import '@styles/index.scss';
 import '@utils/string.ts';
 
-import { BasicCard } from '@components';
+import { CardBasic } from '@components';
 import { GlobalStyles } from '@utils';
 
-const _REGISTRY_ = [BasicCard];
+const _REGISTRY_ = [CardBasic];
 
 _REGISTRY_.forEach((item) => {
   if (!customElements.get(`${COMPONENT_PREFIX}-${item.name.toKebabCase()}`)) {

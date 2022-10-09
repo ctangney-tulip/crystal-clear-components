@@ -1,7 +1,7 @@
 :root {
   --c-bg-color: #{$box-bg-lite};
   --c-f-color: #{$fc-def};
-  --c-border-color: #{$box-border-color};
+  --c-border-color: #{$box-border-color-def};
 }
 
 body[data-theme='dark'] {
