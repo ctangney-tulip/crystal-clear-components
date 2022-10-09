@@ -3,9 +3,9 @@
 
 .cc-basic-card {
   @include font($line-height: $lh-3);
-  margin: 0 0 $m-3;
-  padding: $gutter__lg;
-  border: $box-border__dark;
+  padding: $gutter-lg;
+  border: $box-border;
+  border-color: var(--c-border-color);
 
   &__rounded {
     border-radius: $br-1;

@@ -6,17 +6,27 @@ $c-black: #0c120c;
 $c-grey: #443742;
 $c-white: #f3f4ff;
 
+$colors: (
+  'c-blue-01': $c-blue-01,
+  'c-blue-02': $c-blue-02,
+  'c-blue-lite': $c-blue-lite,
+  'c-black': $c-black,
+  'c-grey': $c-grey,
+  'c-white': $c-white,
+);
+
 /** Box Colors */
 /** A Box is any block-level element; these elements may have
 box-shadows, borders, et cetera. */
-$box-bg__dark: $c-grey;
-$box-bg__lite: $c-blue-lite;
+$box-bg-dark: $c-grey;
+$box-bg-lite: $c-blue-lite;
 $box-bs: 2px 3px 14px -1px rgba(0, 0, 0, 0.65);
-$box-bs__lg: 2px 3px 22px 2px rgba(0, 0, 0, 0.65);
-$box-bs__hover: 2px 27px 30px 2px rgba(0, 0, 0, 0.55);
-$box-border__dark: solid 1px $c-grey;
-$box-border__lite: solid 1px $c-blue-lite;
+$box-bs-lg: 2px 3px 22px 2px rgba(0, 0, 0, 0.65);
+$box-bs-hover: 2px 27px 30px 2px rgba(0, 0, 0, 0.55);
+$box-border-color: $c-grey;
+$box-border-color-lite: $c-blue-lite;
+$box-border: solid 1px;
 
 /** Font Colors */
-$fc: $c-black;
-$fc__lite: $c-white;
+$fc-def: $c-black;
+$fc-lite: $c-white;

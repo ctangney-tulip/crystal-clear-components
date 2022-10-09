@@ -1,0 +1,11 @@
+:root {
+  --c-bg-color: #{$box-bg-lite};
+  --c-f-color: #{$fc-def};
+  --c-border-color: #{$box-border-color};
+}
+
+body[data-theme='dark'] {
+  --c-bg-color: #{$box-bg-dark};
+  --c-f-color: #{$fc-lite};
+  --c-border-color: #{$box-border-color-lite};
+}

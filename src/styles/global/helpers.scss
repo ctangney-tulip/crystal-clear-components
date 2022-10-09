@@ -1,0 +1,16 @@
+/** Font Helpers */
+.f-uppercase {
+  text-transform: uppercase;
+}
+
+.f-italic {
+  font-style: italic;
+}
+
+@each $class, $weight in $font-weights {
+  .#{$class} {
+    font-weight: $weight;
+  }
+}
+
+/** Margin Helpers */

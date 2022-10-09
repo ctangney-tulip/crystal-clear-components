@@ -1,6 +1,7 @@
 .container {
   margin: 0 auto;
-  padding: $gutter__lg;
+  padding: $gutter-lg;
+  max-width: 100%;
 
   @include mq-desktop() {
     max-width: $w-max-x-1;
@@ -23,6 +24,7 @@
 
 .row {
   margin: 0 (-$gutter-x);
+  flex-wrap: wrap;
 }
 
 .col {
@@ -35,7 +37,10 @@
 @for $i from 1 through 8 {
   .col-#{$i} {
     @extend .col;
-    flex: 1 0 math.percentage(math.div($i, 8));
-    max-width: math.percentage(math.div($i, 8));
+
+    @include mq-tablet() {
+      flex: 1 0 math.percentage(math.div($i, 8));
+      max-width: math.percentage(math.div($i, 8));
+    }
   }
 }
