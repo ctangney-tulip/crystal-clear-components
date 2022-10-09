@@ -2,7 +2,6 @@
 const COMPONENT_PREFIX = 'cc';
 const LOAD_CLASS = `.${COMPONENT_PREFIX}-load`;
 
-import '@styles/index.scss';
 import '@utils/string.ts';
 
 import { CardBasic } from '@components';
