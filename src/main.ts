@@ -35,4 +35,11 @@ Array.from(document.querySelectorAll(LOAD_CLASS)).forEach((component) =>
   globalThis.Watcher.observe(component)
 );
 
+if (document.getElementById('toggle__theme')) {
+  import('@components/Global/ToggleDarkMode').then((module) => {
+    const initToggle = module.default;
+    initToggle(document.getElementById('toggle__theme'));
+  });
+}
+
 export {};

@@ -3,7 +3,7 @@
     "baseUrl": "src",
     "paths": {
       "@utils": ["utils/index.ts"],
-      "@components": ["components/index.ts"]
+      "@components": ["components/index.ts", "components/**/*.ts"]
     },
     "target": "esnext",
     "useDefineForClassFields": true,

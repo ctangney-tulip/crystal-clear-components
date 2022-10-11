@@ -2,6 +2,10 @@
   --c-bg-color: #{$box-bg-lite};
   --c-f-color: #{$fc-def};
   --c-border-color: #{$box-border-color-def};
+
+  --c-btn-bg-color: #{$c-blue-lite};
+  --c-btn-f-color: #{$c-black};
+  --c-btn-box-shadow: #{$box-bs-def};
 }
 
 body[data-theme='dark'] {

@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
     <link rel="stylesheet" href="/src/styles/index.scss" />
   </head>
   <body data-theme="dark">
-
     <main id="main-content">
+      <div id="toggle__theme" class="toggle-btn">
+        <input type="checkbox" id="dark-mode-toggle" />
+        <label for="dark-mode-toggle">Toggle Dark Mode</label>
+      </div>
 
       <div class="cc-banner">
         <div class="container">
@@ -14,8 +18,8 @@
               <p>
                 This is the current sandbox for Crystal Clear Components.
                 Everything you see here utilizes the tools in this package --
-                except for the Internet tubes responsible for piping this data to
-                you!
+                except for the Internet tubes responsible for piping this data
+                to you!
               </p>
             </div>
           </div>
@@ -24,24 +28,24 @@
 
       <div class="container">
         <div class="row">
-          <div class="col-2">
+          <div class="col-3">
             <cc-card-basic class="cc-load">
               <h2 slot="heading" class="mb-4">Card Header</h2>
               <div slot="body">
                 <p>
-                  This is a card body. The card is a basic Visual Construct, 
-                  with fixed properties. At some point, I'll come back here and 
-                  outline the fixed properties of this MF, but for now, here's some 
-                  lipsum text lorem ipsum dolor sit amet consectetur adipisicing 
-                  elit. Repudiandae, qui molestiae labore laudantium numquam inventore 
-                  sed deleniti, fuga magnam, expedita tempore veritatis explicabo.
+                  This is a card body. The card is a basic Visual Construct,
+                  with fixed properties. At some point, I'll come back here and
+                  outline the fixed properties of this MF, but for now, here's
+                  some lipsum text lorem ipsum dolor sit amet consectetur
+                  adipisicing elit. Repudiandae, qui molestiae labore laudantium
+                  numquam inventore sed deleniti, fuga magnam, expedita tempore
+                  veritatis explicabo.
                 </p>
               </div>
             </cc-card-basic>
           </div>
         </div>
       </div>
-
     </main>
 
     <script type="module" src="/src/main.ts"></script>
