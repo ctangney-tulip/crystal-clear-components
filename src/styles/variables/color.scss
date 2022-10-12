@@ -29,6 +29,15 @@ $colors: (
   'c-grey': $c-grey,
 );
 
+$theme-colors: (
+  'primary': map.get($colors, 'c-blue'),
+  'secondary': map.get($colors, 'c-green'),
+  'tertiary': map.get($colors, 'c-yellow'),
+  'caution': map.get($colors, 'c-orange'),
+  'error': map.get($colors, 'c-red'),
+  'grey': map.get($colors, 'c-grey'),
+);
+
 $bg-dark: $c-grey-800;
 $bg-lite: $c-grey-200;
 $bs-def: 2px 3px 14px -1px rgba(0, 0, 0, 0.65);
@@ -36,7 +45,7 @@ $bs-lg: 2px 3px 22px 2px rgba(0, 0, 0, 0.65);
 $bs-hover: 2px 27px 30px 2px rgba(0, 0, 0, 0.55);
 $border-color-def: $c-grey;
 $border-color-lite: $c-grey-300;
-$border: solid 1px;
+$border: solid 1px $border-color-def;
 
 /** Font Colors */
 $fc-def: $c-black;

@@ -36,9 +36,9 @@ $toggle-tween: $m-6; // 64px
       content: '';
       position: absolute;
       top: $toggle-btn-x;
-      left: 5px;
-      width: 32px;
-      height: 32px;
+      left: $toggle-btn-x;
+      width: $toggle-btn-size;
+      height: $toggle-btn-size;
       background: $c-grey-800;
       border-radius: 50%;
       transition: 0.3s;

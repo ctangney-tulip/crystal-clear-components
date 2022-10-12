@@ -17,11 +17,16 @@ Meant to be an extension to existing, familiar HTML, Crystal Clear Components ut
 ## Core Concepts
 
 1. KISS -- Keep It Simple, Stupid.
-   When in doubt, utilize the basics: HTML, CSS, JavaScript. Only use what you need. Don't do anything else.
-2. Add more concepts that make sense as you come up with them....
+   When in doubt, utilize the basics: HTML, CSS, JavaScript. Only use what you need. Don't do anything else. This means...
+   - Opt to use existing features. Things like HTML templates, CSS variables, and JavaScript Web Components should all be utilized when possible.
+2. Put the user first.
+   What the hell does this actually mean? You need to make it make sense to people other than yourself - CJT
+3. Write as little code as possible to keep things lightweight.
+   - Don't make things obtuse, or difficult to understand: just keep things lean.
+4. Add more concepts that make sense as you come up with them.... - CJT
 
 ## Still To Do...
 
-1. Code splitting for Components
-2. Code splitting for CSS
-3. Pipeline / build stuff
+1. Code splitting for Components TS / JS
+   - This will enable users to embed individual components from the library onto their pages.
+2. Pipeline / build stuff
