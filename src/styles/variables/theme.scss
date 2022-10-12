@@ -6,10 +6,13 @@
   --c-btn-bg-color: #{lighten($c-blue, 70%)};
   --c-btn-f-color: #{$c-black};
   --c-btn-box-shadow: #{$bs-def};
+  --c-hr-color: #{$border-color-def};
 }
 
 body[data-theme='dark'] {
   --c-bg-color: #{$bg-dark};
   --c-f-color: #{$fc-lite};
   --c-border-color: #{$border-color-lite};
+
+  --c-hr-color: #{$border-color-lite};
 }
