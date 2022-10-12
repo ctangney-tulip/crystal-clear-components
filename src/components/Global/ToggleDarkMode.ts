@@ -36,7 +36,9 @@ const ToggleDarkMode = (element: HTMLElement) => {
   };
 
   const bindListeners = () => {
-    self.querySelector('.btn-toggle')!.addEventListener('click', toggleTheme);
+    self
+      .querySelector(':scope > input')!
+      .addEventListener('click', toggleTheme);
   };
 
   const init = () => {

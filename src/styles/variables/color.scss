@@ -1,30 +1,44 @@
 /** Default Colors */
-$c-blue-01: #0267c1;
-$c-blue-02: #0075c4;
-$c-blue-lite: #cae5ff;
-$c-black: #0c120c;
-$c-grey: #443742;
-$c-white: #f3f4ff;
+$c-grey-100: #e9ecef;
+$c-grey-200: #dee2e6;
+$c-grey-300: #ced4da;
+$c-grey-400: #adb5bd;
+$c-grey-500: #6c757d;
+$c-grey-600: #495057;
+$c-grey-700: #343a40;
+$c-grey-800: #212529;
+$c-grey-900: #0e0f0f;
+
+$c-blue: #264653;
+$c-green: #2a9d8f;
+$c-yellow: #e9c46a;
+$c-orange: #f4a261;
+$c-red: #e76851;
+$c-white: #f8f9fa;
+$c-black: $c-grey-900;
+$c-grey: $c-grey-500;
 
 $colors: (
-  'c-blue-01': $c-blue-01,
-  'c-blue-02': $c-blue-02,
-  'c-blue-lite': $c-blue-lite,
+  'c-blue': $c-blue,
+  'c-green': $c-green,
+  'c-yellow': $c-yellow,
+  'c-orange': $c-orange,
+  'c-red': $c-red,
+  'c-white': $c-white,
   'c-black': $c-black,
   'c-grey': $c-grey,
-  'c-white': $c-white,
 );
 
 /** Box Colors */
 /** A Box is any block-level element; these elements may have
 box-shadows, borders, et cetera. */
-$box-bg-dark: $c-grey;
-$box-bg-lite: $c-blue-lite;
+$box-bg-dark: $c-blue;
+$box-bg-lite: lighten($c-blue, 70%);
 $box-bs-def: 2px 3px 14px -1px rgba(0, 0, 0, 0.65);
 $box-bs-lg: 2px 3px 22px 2px rgba(0, 0, 0, 0.65);
 $box-bs-hover: 2px 27px 30px 2px rgba(0, 0, 0, 0.55);
 $box-border-color-def: $c-grey;
-$box-border-color-lite: $c-blue-lite;
+$box-border-color-lite: lighten($c-blue, 70%) e;
 $box-border: solid 1px;
 
 /** Font Colors */
