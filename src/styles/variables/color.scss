@@ -29,17 +29,14 @@ $colors: (
   'c-grey': $c-grey,
 );
 
-/** Box Colors */
-/** A Box is any block-level element; these elements may have
-box-shadows, borders, et cetera. */
-$box-bg-dark: $c-blue;
-$box-bg-lite: lighten($c-blue, 70%);
-$box-bs-def: 2px 3px 14px -1px rgba(0, 0, 0, 0.65);
-$box-bs-lg: 2px 3px 22px 2px rgba(0, 0, 0, 0.65);
-$box-bs-hover: 2px 27px 30px 2px rgba(0, 0, 0, 0.55);
-$box-border-color-def: $c-grey;
-$box-border-color-lite: lighten($c-blue, 70%) e;
-$box-border: solid 1px;
+$bg-dark: $c-grey-800;
+$bg-lite: $c-grey-200;
+$bs-def: 2px 3px 14px -1px rgba(0, 0, 0, 0.65);
+$bs-lg: 2px 3px 22px 2px rgba(0, 0, 0, 0.65);
+$bs-hover: 2px 27px 30px 2px rgba(0, 0, 0, 0.55);
+$border-color-def: $c-grey;
+$border-color-lite: $c-grey-300;
+$border: solid 1px;
 
 /** Font Colors */
 $fc-def: $c-black;

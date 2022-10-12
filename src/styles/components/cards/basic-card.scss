@@ -4,7 +4,7 @@
 .cc-basic-card {
   @include font($line-height: $lh-3);
   padding: $gutter-lg;
-  border: $box-border;
+  border: $border;
   border-color: var(--c-border-color);
 
   &__rounded {

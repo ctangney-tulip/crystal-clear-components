@@ -116,3 +116,14 @@ $index: 1;
   $index: $index + 1;
 }
 /*#endregion*/
+
+.sr-only {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  top: -100vh;
+  left: -100vw;
+  overflow: hidden;
+  opacity: 0;
+  color: transparent;
+}

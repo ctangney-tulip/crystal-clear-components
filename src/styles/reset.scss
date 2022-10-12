@@ -18,6 +18,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  position: relative;
 }
 
 /* Reapply the pointer cursor for anchor tags */

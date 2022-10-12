@@ -1,15 +1,15 @@
 :root {
-  --c-bg-color: #{$box-bg-lite};
+  --c-bg-color: #{$bg-lite};
   --c-f-color: #{$fc-def};
-  --c-border-color: #{$box-border-color-def};
+  --c-border-color: #{$border-color-def};
 
   --c-btn-bg-color: #{lighten($c-blue, 70%)};
   --c-btn-f-color: #{$c-black};
-  --c-btn-box-shadow: #{$box-bs-def};
+  --c-btn-box-shadow: #{$bs-def};
 }
 
 body[data-theme='dark'] {
-  --c-bg-color: #{$box-bg-dark};
+  --c-bg-color: #{$bg-dark};
   --c-f-color: #{$fc-lite};
-  --c-border-color: #{$box-border-color-lite};
+  --c-border-color: #{$border-color-lite};
 }
