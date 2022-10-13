@@ -28,6 +28,26 @@
 /*#endregion*/
 
 /*#region Margin Helpers */
+.mt-auto {
+  margin-top: auto;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
+.mb-auto {
+  margin-bottom: auto;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.mx-auto {
+  margin: 0 auto;
+}
+
 $index: 1;
 @each $name, $margin, $i in $margins {
   .mt-#{$index} {
@@ -59,26 +79,6 @@ $index: 1;
   }
 
   $index: $index + 1;
-}
-
-.mt-auto {
-  margin-top: auto;
-}
-
-.mr-auto {
-  margin-right: auto;
-}
-
-.mb-auto {
-  margin-bottom: auto;
-}
-
-.ml-auto {
-  margin-left: auto;
-}
-
-.mx-auto {
-  margin: 0 auto;
 }
 /*#endregion*/
 

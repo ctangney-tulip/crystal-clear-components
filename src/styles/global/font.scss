@@ -25,3 +25,8 @@ h5 {
 h6 {
   font-size: $hs-6;
 }
+
+a,
+p {
+  line-height: map-get($line-heights, 'lh-2');
+}
