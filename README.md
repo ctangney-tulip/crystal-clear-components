@@ -2,7 +2,7 @@
 
 Enforcing brand guidelines has never been simpler.
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/vitejs-vite-uxyxoy)
+[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/chocolate-chip-cookies)
 
 ## What is this nonsense?
 
