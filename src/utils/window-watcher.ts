@@ -1,5 +1,5 @@
 export const WindowWatcher = (
-  WatcherOpts: IntersectionObserver,
+  WatcherOpts: IntersectionObserverInit,
   elementSelector: string
 ) => {
   globalThis.Watcher = new IntersectionObserver((entries) => {

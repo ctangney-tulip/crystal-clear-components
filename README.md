@@ -28,6 +28,4 @@ Meant to be an extension to existing, familiar HTML, Crystal Clear Components ut
 ## Still To Do...
 
 1. Roadmap
-2. Code splitting for Components TS / JS
-   - This will enable users to embed individual components from the library onto their pages.
-3. Pipeline / build stuff
+2. Pipeline / build stuff
