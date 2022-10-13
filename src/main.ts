@@ -4,42 +4,45 @@ const LOAD_CLASS = `.${COMPONENT_PREFIX}-load`;
 
 import '@utils/string.ts';
 
-import { CardBasic } from '@components';
-import { GlobalStyles } from '@utils';
-
-const _REGISTRY_ = [CardBasic];
-
-_REGISTRY_.forEach((item) => {
-  if (!customElements.get(`${COMPONENT_PREFIX}-${item.name.toKebabCase()}`)) {
-    customElements.define(
-      `${COMPONENT_PREFIX}-${item.name.toKebabCase()}`,
-      item
-    );
-  }
-});
+import { GlobalStyles, WindowWatcher } from '@utils';
 
 const WatcherOpts = {
   threshold: 0.1,
   rootMargin: `${GlobalStyles.gutters['gutter__lg']}`,
 };
 
-globalThis.Watcher = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    entry.isIntersecting &&
-      entry.target.getAttribute('data-rendered') &&
-      entry.target.setAttribute('data-opaque', 'true');
-  });
-}, WatcherOpts);
+WindowWatcher(WatcherOpts, LOAD_CLASS);
 
-Array.from(document.querySelectorAll(LOAD_CLASS)).forEach((component) =>
-  globalThis.Watcher.observe(component)
-);
+const loadModules = () => {
+  return new Promise(async (resolve) => {
+    const _REGISTRY_: Array<CustomElementConstructor> = [];
 
-if (document.getElementById('toggle-theme')) {
-  import('@components/Global/ToggleDarkMode').then((module) => {
-    const initToggle = module.default;
-    initToggle(document.getElementById('toggle-theme')!);
+    if (document.getElementById('toggle-theme')) {
+      await import('@components/Global/ToggleDarkMode').then((module) => {
+        const initToggle = module.default;
+        initToggle(document.getElementById('toggle-theme')!);
+      });
+    }
+
+    if (document.querySelectorAll(`${COMPONENT_PREFIX}-card-basic`).length) {
+      await import('@components/Cards/CardBasic').then((module) => {
+        _REGISTRY_.push(module.default);
+      });
+    }
+
+    resolve(_REGISTRY_);
   });
-}
+};
+
+loadModules().then((registry) => {
+  (registry as Array<CustomElementConstructor>).forEach((item) => {
+    if (!customElements.get(`${COMPONENT_PREFIX}-${item.name.toKebabCase()}`)) {
+      customElements.define(
+        `${COMPONENT_PREFIX}-${item.name.toKebabCase()}`,
+        item
+      );
+    }
+  });
+});
 
 export {};
