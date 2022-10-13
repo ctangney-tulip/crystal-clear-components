@@ -2,6 +2,10 @@ export const isDivElement = function (element: Element) {
   return element.tagName.toLowerCase() === 'div';
 };
 
+export const isTypeof = function (element: Element, nodetype: string) {
+  return element.tagName.toLowerCase() === nodetype;
+};
+
 export const isOnScreen = function (element: Element) {
   const rect = element.getBoundingClientRect();
   return (

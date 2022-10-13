@@ -1,0 +1,12 @@
+@import '@styles/variables';
+@import '@styles/mixins';
+
+.cc-dropdown {
+  > .dropdown-label {
+    @include font(
+      $font-weight: map-get($font-weights, 'fw-lite'),
+      $font-size: map-get($font-sizes, 'fs-5')
+    );
+    cursor: pointer;
+  }
+}

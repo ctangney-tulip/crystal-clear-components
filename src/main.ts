@@ -30,6 +30,12 @@ const loadModules = () => {
       });
     }
 
+    if (document.querySelectorAll(`${COMPONENT_PREFIX}-dropdown`).length) {
+      await import('@components/Dropdowns/Dropdown').then((module) => {
+        _REGISTRY_.push(module.default);
+      });
+    }
+
     resolve(_REGISTRY_);
   });
 };
