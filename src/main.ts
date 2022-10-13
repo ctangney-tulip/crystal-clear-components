@@ -38,7 +38,7 @@ Array.from(document.querySelectorAll(LOAD_CLASS)).forEach((component) =>
 if (document.getElementById('toggle-theme')) {
   import('@components/Global/ToggleDarkMode').then((module) => {
     const initToggle = module.default;
-    initToggle(document.getElementById('toggle-theme'));
+    initToggle(document.getElementById('toggle-theme')!);
   });
 }
 
