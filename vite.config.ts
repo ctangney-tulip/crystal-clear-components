@@ -9,4 +9,12 @@ export default defineConfig({
       '@utils': path.resolve(__dirname, './src/utils/'),
     },
   },
+  build: {
+    rollupOptions: {
+      input: {
+        main: path.resolve(__dirname, 'index.html'),
+        pages: path.resolve(__dirname, 'pages/**/*.html'),
+      },
+    },
+  },
 });
