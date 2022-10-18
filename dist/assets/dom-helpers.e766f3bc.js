@@ -1,0 +1,1 @@
+const n=function(e){return e.tagName.toLowerCase()==="div"},o=function(e,t){return e.tagName.toLowerCase()===t},i=function(e){const t=e.getBoundingClientRect();return t.top>=0&&t.left>=0&&t.bottom<=(window.innerHeight||document.documentElement.clientHeight)&&t.right<=(window.innerWidth||document.documentElement.clientWidth)};export{i as a,o as b,n as i};

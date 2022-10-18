@@ -1,7 +1,13 @@
 import { defineConfig } from 'vite';
 import path from 'path';
+import legacy from '@vitejs/plugin-legacy';
 
 export default defineConfig({
+  plugins: [
+    legacy({
+      targets: ['defaults', 'not IE 11'],
+    }),
+  ],
   resolve: {
     alias: {
       '@components': path.resolve(__dirname, './src/components/'),
@@ -10,11 +16,18 @@ export default defineConfig({
     },
   },
   build: {
+    emptyOutDir: true,
+    manifest: true,
     rollupOptions: {
       input: {
         main: path.resolve(__dirname, 'index.html'),
-        pages: path.resolve(__dirname, 'pages/**/*.html'),
       },
     },
+  },
+  css: {
+    devSourcemap: true,
+  },
+  server: {
+    host: '0.0.0.0',
   },
 });

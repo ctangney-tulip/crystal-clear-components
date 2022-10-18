@@ -1,23 +1,28 @@
 $nav-bs-open: 2px 3px 4px -1px rgb(0, 0, 0, 0.1);
+$nav-width: 225px;
 
-#nav-index > ul > li > cc-dropdown {
-  .cc-dropdown {
-    border: $border;
-    border-radius: math.div($br-1, 2);
-    border-color: var(--c-border-color);
-    background-color: var(--c-bg-color-grey);
+#nav-index {
+  width: $nav-width;
 
-    > .dropdown-label {
-      background-color: var(--c-bg-color);
-    }
+  > ul > li > cc-dropdown {
+    .cc-dropdown {
+      border: $border;
+      border-radius: math.div($br-1, 2);
+      border-color: var(--c-border-color);
+      background-color: var(--c-bg-color-grey);
 
-    > * {
-      display: block;
-      @include padding($m-2 $m-4);
-    }
+      > .dropdown-label {
+        background-color: var(--c-bg-color);
+      }
 
-    &[open] > .dropdown-label {
-      box-shadow: $nav-bs-open;
+      > * {
+        display: block;
+        @include padding($m-2 $m-4);
+      }
+
+      &[open] > .dropdown-label {
+        box-shadow: $nav-bs-open;
+      }
     }
   }
 }
