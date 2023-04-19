@@ -18,7 +18,12 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  position: relative;
+}
+
+/* body / html sizing for apps */
+/* remove if not needed */
+html, body {
+  height: 100%;
 }
 
 /* Reapply the pointer cursor for anchor tags */

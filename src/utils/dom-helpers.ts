@@ -1,5 +1,5 @@
 export const isDivElement = function (element: Element) {
-  return element.tagName.toLowerCase() === 'div';
+  return element.tagName.toLowerCase() === "div";
 };
 
 export const isTypeof = function (element: Element, nodetype: string) {
@@ -18,9 +18,41 @@ export const isOnScreen = function (element: Element) {
 };
 
 export const checkRendered = function (element: Element) {
-  return element.hasAttribute('data-rendered');
+  return element.hasAttribute("data-rendered");
 };
 
 export const checkVisible = function (element: Element) {
-  return element.hasAttribute('data-visible');
+  return element.hasAttribute("data-visible");
+};
+
+export const loadComponent = function (element: Element) {
+  const host = element.classList.contains("cc-load")
+    ? element
+    : element.closest(".cc-load");
+
+  if (host) {
+    try {
+      !host!.getAttribute("data-rendered") &&
+        host!.setAttribute("data-rendered", "true");
+      isOnScreen(element) &&
+        !host!.getAttribute("data-opaque") &&
+        host!.setAttribute("data-opaque", "true");
+    } catch (e) {
+      console.error(e);
+      throw new Error();
+    }
+  }
+};
+
+export const inheritParentSelectors = function (
+  parent: Element,
+  child: Element
+) {
+  parent.classList.forEach((cssClass) => child.classList.add(cssClass));
+  parent.removeAttribute("class");
+
+  if (parent.id) {
+    child.id = parent.id;
+    parent.removeAttribute("id");
+  }
 };

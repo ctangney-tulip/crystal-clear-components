@@ -2,6 +2,7 @@
 
 declare global {
   var Watcher: InterfaceObserver;
+  var Registry: Registry;
 
   interface String {
     toKebabCase(): string;

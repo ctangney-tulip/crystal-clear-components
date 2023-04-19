@@ -1,54 +1,28 @@
 // Environment Variables
-const COMPONENT_PREFIX = 'cc';
+const COMPONENT_PREFIX = "cc";
 const LOAD_CLASS = `.${COMPONENT_PREFIX}-load`;
+import Registry from "./registry";
 
-import '@utils/string.ts';
+import { GlobalStyles, WindowWatcher } from "@utils";
 
-import { GlobalStyles, WindowWatcher } from '@utils';
+import "@utils/string.ts";
 
 const WatcherOpts = {
   threshold: 0.1,
-  rootMargin: `${GlobalStyles.gutters['gutter__lg']}`,
+  rootMargin: `${GlobalStyles.gutters["gutter__lg"]}`,
 };
 
 WindowWatcher(WatcherOpts, LOAD_CLASS);
 
-const loadModules = () => {
-  return new Promise(async (resolve) => {
-    const _REGISTRY_: Array<CustomElementConstructor> = [];
-
-    if (document.getElementById('toggle-theme')) {
-      await import('@components/Global/ToggleDarkMode').then((module) => {
-        const initToggle = module.default;
-        initToggle(document.getElementById('toggle-theme')!);
-      });
-    }
-
-    if (document.querySelectorAll(`${COMPONENT_PREFIX}-card-basic`).length) {
-      await import('@components/Cards/CardBasic').then((module) => {
-        _REGISTRY_.push(module.default);
-      });
-    }
-
-    if (document.querySelectorAll(`${COMPONENT_PREFIX}-dropdown`).length) {
-      await import('@components/Dropdowns/Dropdown').then((module) => {
-        _REGISTRY_.push(module.default);
-      });
-    }
-
-    resolve(_REGISTRY_);
+if (document.getElementById("toggle-theme")) {
+  await import("@components/Global/ToggleDarkMode").then((module) => {
+    const initToggle = module.default;
+    initToggle(document.getElementById("toggle-theme")!);
   });
-};
+}
 
-loadModules().then((registry) => {
-  (registry as Array<CustomElementConstructor>).forEach((item) => {
-    if (!customElements.get(`${COMPONENT_PREFIX}-${item.name.toKebabCase()}`)) {
-      customElements.define(
-        `${COMPONENT_PREFIX}-${item.name.toKebabCase()}`,
-        item
-      );
-    }
-  });
-});
+// make new registry here -- remove load modules doo-doo
+const REGISTRY = new Registry(COMPONENT_PREFIX);
+globalThis.Registry = REGISTRY;
 
 export {};

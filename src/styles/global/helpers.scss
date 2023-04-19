@@ -1,81 +1,117 @@
 /*#region Text Helpers
 */
 .text-uppercase {
-  text-transform: uppercase;
+  text-transform: uppercase !important;
 }
 
 .text-italic {
-  font-style: italic;
+  font-style: italic !important;
 }
 
 .text-left {
-  text-align: left;
+  text-align: left !important;
 }
 
 .text-center {
-  text-align: center;
+  text-align: center !important;
 }
 
 .text-right {
-  text-align: right;
+  text-align: right !important;
 }
 
 @each $class, $weight in $font-weights {
   .#{$class} {
-    font-weight: $weight;
+    font-weight: $weight !important;
   }
 }
 /*#endregion*/
 
 /*#region Margin Helpers */
+.mt-0 {
+  margin-top: 0 !important;
+}
+
+.mr-0 {
+  margin-right: 0 !important;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+.ml-0 {
+  margin-left: 0 !important;
+}
+
+.mx-0 {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+
+.my-0 {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
 .mt-auto {
-  margin-top: auto;
+  margin-top: auto !important;
 }
 
 .mr-auto {
-  margin-right: auto;
+  margin-right: auto !important;
 }
 
 .mb-auto {
-  margin-bottom: auto;
+  margin-bottom: auto !important;
 }
 
 .ml-auto {
-  margin-left: auto;
+  margin-left: auto !important;
+}
+
+.m-auto {
+  margin: auto !important;
 }
 
 .mx-auto {
-  margin: 0 auto;
+  margin: 0 auto !important;
+}
+
+.my-auto {
+  margin: auto 0 !important;
 }
 
 $index: 1;
 @each $name, $margin, $i in $margins {
   .mt-#{$index} {
-    margin-top: $margin;
+    margin-top: $margin !important;
   }
 
   .mr-#{$index} {
-    margin-right: $margin;
+    margin-right: $margin !important;
   }
 
   .mb-#{$index} {
-    margin-bottom: $margin;
+    margin-bottom: $margin !important;
   }
 
   .ml-#{$index} {
-    margin-left: $margin;
+    margin-left: $margin !important;
   }
 
   .mx-#{$index} {
-    margin: 0 $margin;
+    margin-left: $margin !important;
+    margin-right: $margin !important;
   }
 
   .my-#{$index} {
-    margin: $margin 0;
+    margin-top: $margin !important;
+    margin-bottom: $margin !important;
   }
 
   .m-#{$index} {
-    margin: $margin;
+    margin: $margin !important;
   }
 
   $index: $index + 1;
@@ -84,66 +120,100 @@ $index: 1;
 
 /*#region Padding Helpers */
 .pt-0 {
-  padding-top: 0;
+  padding-top: 0 !important;
 }
+
 .pr-0 {
-  padding-right: 0;
+  padding-right: 0 !important;
 }
+
 .pb-0 {
-  padding-bottom: 0;
+  padding-bottom: 0 !important;
 }
+
 .pl-0 {
-  padding-left: 0;
+  padding-left: 0 !important;
 }
+
 .px-0 {
-  padding-right: 0;
-  padding-left: 0;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
 }
+
 .py-0 {
-  padding-top: 0;
-  padding-bottom: 0;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
 }
+
 $index: 1;
 @each $name, $padding, $i in $margins {
   .pt-#{$index} {
-    padding-top: $padding;
+    padding-top: $padding !important;
   }
 
   .pr-#{$index} {
-    padding-right: $padding;
+    padding-right: $padding !important;
   }
 
   .pb-#{$index} {
-    padding-bottom: $padding;
+    padding-bottom: $padding !important;
   }
 
   .pl-#{$index} {
-    padding-left: $padding;
+    padding-left: $padding !important;
   }
 
   .px-#{$index} {
-    padding: 0 $padding;
+    padding-left: $padding !important;
+    padding-right: $padding !important;
   }
 
   .py-#{$index} {
-    padding: $padding 0;
+    padding-top: $padding !important;
+    padding-bottom: $padding !important;
   }
 
   .p-#{$index} {
-    padding: $padding;
+    padding: $padding !important;
   }
 
   $index: $index + 1;
 }
 /*#endregion*/
 
+/*#region Display Helpers */
+.d-flex {
+  display: flex !important;
+}
+
+.d-inline {
+  display: inline !important;
+}
+
+.d-inline-block {
+  display: inline-block !important;
+}
+
+.align-items-center {
+  align-items: center !important;
+}
+
+.align-items-end {
+  align-items: flex-end !important;
+}
+
+.align-items-start {
+  align-items: flex-start !important;
+}
+/*#endregion*/
+
 .sr-only {
-  position: absolute;
-  height: 1px;
-  width: 1px;
-  top: -100vh;
-  left: -100vw;
-  overflow: hidden;
-  opacity: 0;
-  color: transparent;
+  position: absolute !important;
+  height: 1px !important;
+  width: 1px !important;
+  top: -100vh !important;
+  left: -100vw !important;
+  overflow: hidden !important;
+  opacity: 0 !important;
+  color: transparent !important;
 }
